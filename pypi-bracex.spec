@@ -4,7 +4,7 @@
 #
 Name     : pypi-bracex
 Version  : 2.2.1
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/bd/ef/6273bba9e5bc615aab4997159eeaddfe03c825eeabe2942c39e91be5afec/bracex-2.2.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/bd/ef/6273bba9e5bc615aab4997159eeaddfe03c825eeabe2942c39e91be5afec/bracex-2.2.1.tar.gz
 Summary  : Bash style brace expander.
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641520439
+export SOURCE_DATE_EPOCH=1641520648
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -84,6 +84,7 @@ python3 -m build --wheel --skip-dependency-check --no-isolation
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-bracex
+cp %{_builddir}/bracex-2.2.1/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-bracex/64b6788556415e2e23a472f9de4eba6bfc9f1847
 cp %{_builddir}/bracex-2.2.1/docs/src/markdown/about/license.md %{buildroot}/usr/share/package-licenses/pypi-bracex/92e0ed1c5183910686b14c1fd37184cd086409e8
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
@@ -95,6 +96,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
+/usr/share/package-licenses/pypi-bracex/64b6788556415e2e23a472f9de4eba6bfc9f1847
 /usr/share/package-licenses/pypi-bracex/92e0ed1c5183910686b14c1fd37184cd086409e8
 
 %files python
