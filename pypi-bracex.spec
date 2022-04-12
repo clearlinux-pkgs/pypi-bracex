@@ -4,7 +4,7 @@
 #
 Name     : pypi-bracex
 Version  : 2.2.1
-Release  : 2
+Release  : 3
 URL      : https://files.pythonhosted.org/packages/bd/ef/6273bba9e5bc615aab4997159eeaddfe03c825eeabe2942c39e91be5afec/bracex-2.2.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/bd/ef/6273bba9e5bc615aab4997159eeaddfe03c825eeabe2942c39e91be5afec/bracex-2.2.1.tar.gz
 Summary  : Bash style brace expander.
@@ -14,13 +14,13 @@ Requires: pypi-bracex-license = %{version}-%{release}
 Requires: pypi-bracex-python = %{version}-%{release}
 Requires: pypi-bracex-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pypi(pluggy)
 BuildRequires : pypi(py)
-BuildRequires : pypi(pytest)
 BuildRequires : pypi(setuptools)
-BuildRequires : pypi(tox)
-BuildRequires : pypi(virtualenv)
 BuildRequires : pypi(wheel)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 
 %description
 [![Donate via PayPal][donate-image]][donate-link]
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641520648
+export SOURCE_DATE_EPOCH=1649721888
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
