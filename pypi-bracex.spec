@@ -4,7 +4,7 @@
 #
 Name     : pypi-bracex
 Version  : 2.3.post1
-Release  : 7
+Release  : 8
 URL      : https://files.pythonhosted.org/packages/b3/96/d53e290ddf6215cfb24f93449a1835eff566f79a1f332cf046a978df0c9e/bracex-2.3.post1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b3/96/d53e290ddf6215cfb24f93449a1835eff566f79a1f332cf046a978df0c9e/bracex-2.3.post1.tar.gz
 Summary  : Bash style brace expander.
