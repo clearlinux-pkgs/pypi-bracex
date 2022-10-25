@@ -4,7 +4,7 @@
 #
 Name     : pypi-bracex
 Version  : 2.3.post1
-Release  : 14
+Release  : 15
 URL      : https://files.pythonhosted.org/packages/b3/96/d53e290ddf6215cfb24f93449a1835eff566f79a1f332cf046a978df0c9e/bracex-2.3.post1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b3/96/d53e290ddf6215cfb24f93449a1835eff566f79a1f332cf046a978df0c9e/bracex-2.3.post1.tar.gz
 Summary  : Bash style brace expander.
@@ -70,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656362292
+export SOURCE_DATE_EPOCH=1666706656
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -95,7 +95,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-bracex
-cp %{_builddir}/bracex-2.3.post1/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-bracex/25b4af7bbf50d4243728dc64e4dec12a687da750
+cp %{_builddir}/bracex-%{version}/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-bracex/25b4af7bbf50d4243728dc64e4dec12a687da750 || :
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
