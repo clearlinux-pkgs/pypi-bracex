@@ -1,5 +1,5 @@
 PKG_NAME := pypi-bracex
-URL = https://files.pythonhosted.org/packages/b3/96/d53e290ddf6215cfb24f93449a1835eff566f79a1f332cf046a978df0c9e/bracex-2.3.post1.tar.gz
+URL = https://files.pythonhosted.org/packages/90/8b/34d174ce519f859af104c722fa30213103d34896a07a4f27bde6ac780633/bracex-2.4.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
